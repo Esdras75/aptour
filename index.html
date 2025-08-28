@@ -1,38 +1,95 @@
-<!doctype html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hello, GitHub Pages</title>
-  <style>
-    :root { --bg:#0f172a; --fg:#e2e8f0; --accent:#22d3ee; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      display: grid;
-      place-items: center;
-      background: var(--bg);
-      color: var(--fg);
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
-    }
-    main { text-align: center; padding: 2rem; }
-    h1 { font-size: 3rem; margin: .25em 0; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    small { opacity: .75; }
-  </style>
+<title>Project Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main>
-    <h1>✨ Hello, GitHub Pages!</h1>
-    <p>Se você está vendo esta página, o deploy funcionou 🎉</p>
-    <p><small>Última atualização: <time id="ts"></time></small></p>
-    <!-- opcional: coloque o link do seu repo abaixo -->
-    <p><a href="https://github.com/SEU_USUARIO/SEU_REPOSITORIO" target="_blank" rel="noopener">Ver código no GitHub</a></p>
-  </main>
-  <script>
-    document.getElementById('ts').textContent =
-      new Date(document.lastModified).toLocaleString();
-  </script>
+<body class="multiple-scenes ">
+
+<div id="pano"></div>
+
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-pcorredor">
+        <li class="text">pCorredor</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-pentrada">
+        <li class="text">pEntrada</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-plavanderia">
+        <li class="text">pLavanderia</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-pcozinhaquarto">
+        <li class="text">pCozinhaQuarto</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-pentradaquarto">
+        <li class="text">pEntradaQuarto</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-pquartobanheiro">
+        <li class="text">pQuartoBanheiro</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-pbanheiro">
+        <li class="text">pBanheiro</li>
+      </a>
+    
+  </ul>
+</div>
+
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
+
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
+
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
+
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
+
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
+
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
+
+<script src="data.js"></script>
+<script src="index.js"></script>
+
 </body>
 </html>
